@@ -34,26 +34,28 @@ function my_keydown(e)
 			console.log("alphabet key ")
 
 		} 
-		if (( keyPressed >= 48 && keyPressed <=57 ))
-		{ img_image = "numkey.png";
-		add();
+		else if (keyPressed >= 48 && keyPressed <=57 )
+		{ numkey();
 		   document.getElementById("d1").innerHTML="YOU PRESSED A NUMBER KEY ";
 		   console.log("number key ");}
 	
 		
 
-		if (( keyPressed >= 37 && keyPressed <=40 ))
-	{ img_image = "Arrkey.png";
-	add();
+		else if (( keyPressed >= 37 && keyPressed <=40 ))
+	{ Arrkey();
 		document.getElementById("d1").innerHTML="YOU PRESSED AN ARROW KEY ";
    console.log(" arrow key ");}
 
-  //if (( keyPressed >= 17 && keyPressed <=18) || (keyPressed = 27) ){
-//	img_image = "spkey.png";
-//add();
-	//document.getElementById("d1").innerHTML="YOU PRESSED A SPECIAL KEY ";
-//console.log(" special key ");
-//}
+  else if ( keyPressed == 17  || keyPressed ==18 || keyPressed == 27 ){
+	specialkey();
+	document.getElementById("d1").innerHTML="YOU PRESSED A SPECIAL KEY ";
+   console.log(" special key ");}
+
+   else {
+	   otherkey();
+	   document.getElementById("d1").innerHTML="YOU PRESSED A OTHER KEY ";
+   console.log(" other key ");
+   }
 }
 
 
@@ -62,5 +64,21 @@ function alphabetkey()
 add(); 
 }
 
+function numkey(){
+	img_image = "numkey.png";
+	add();
+}
 
+function Arrkey(){
+	img_image = "Arrkey.png";
+	add();
+}
 
+function specialkey(){
+	img_image = "spkey.png";
+   add();
+}
+function otherkey(){
+	img_image="otherkey.png";
+	add();
+}
