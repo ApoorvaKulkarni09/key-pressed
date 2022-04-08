@@ -41,7 +41,7 @@ function my_keydown(e)
 	
 		
 
-		else if (( keyPressed >= 37 && keyPressed <=40 ))
+		else if ( keyPressed >= 37 && keyPressed <=40 )
 	{ Arrkey();
 		document.getElementById("d1").innerHTML="YOU PRESSED AN ARROW KEY ";
    console.log(" arrow key ");}
